@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: hsl(235, 21%, 11%);
+}
+
+body img {
+    width: 100vw;
+}
+
+.todo-list-sections {
+    position: absolute;
+    top: 15vh;
+    width: 40vw;
+    left: 30vw;
+}
+
+.todo-list-sections section {
+    margin-bottom: 3vh;
+    border-radius: 5px;
+}
+
+.todo-list-sections section:nth-of-type(1), .todo-list-sections section:nth-of-type(2) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.todo-list-sections section:nth-of-type(1) h1 {
+    margin-left: 1vh;
+    color: white;
+    letter-spacing: 10px;
+}
+
+.todo-list-sections section:nth-of-type(1) img {
+    width: 30px;
+    height: 30px;
+    margin: 1.5vh 1vh 0 auto;
+}
+
+.todo-list-sections section:nth-of-type(2) {
+    background-color: hsl(235, 24%, 19%);
+    height: 5vh;
+}
+
+.circle-bg {
+    height: 25px; 
+    width: 25px;
+    margin: 1vh 0 0 2vh;
+    border-radius: 25px;
+    background-color: hsl(233, 14%, 35%);
+}
+
+.circle {
+    height: 23px; 
+    width: 23px;
+    margin: 1px;
+    border-radius: 23px;
+    background-color: hsl(235, 24%, 19%);
+}
+
+.todo-list-sections section:nth-of-type(2) input {
+    margin-left: auto;
+    width: 35vw;
+    padding: 0.5vh;
+    border: 0;
+    border-radius: 5px;
+    color: hsl(234, 39%, 85%);
+    background-color: hsl(235, 24%, 19%);
+}
+
+.todo-list-sections section:nth-of-type(2) input:focus {
+    outline: none;
+}
+
+.todo-list-sections section:nth-of-type(3) {
+    width: 100%;
+    background-color: hsl(235, 24%, 19%);
+}
+
+.todo-item {
+    padding: 1vh 0;
+    border-bottom: 1px solid hsl(234, 11%, 52%);
+    display: flex;
+    flex-direction: row;
+}
+
+.todo-item .circle-bg {
+    margin: 0.5vh 2vh;
+    cursor: pointer;
+}
+
+.checked-circle {
+    background: linear-gradient(315deg, #ab79f9, #71b6f9)
+}
+
+.check {
+    height: 12px;
+    width: 15px; 
+    margin: 6px 4px;
+}
+
+.item {
+    cursor: pointer;
+    margin: 1vh 1vh;
+    color: hsl(234, 39%, 85%);
+}
+
+.checked-item {
+    text-decoration-line: line-through;
+    color: hsl(234, 11%, 52%);
+}
+
+.remove {
+    width: 20px;
+    height: 20px;
+    margin: 1vh 2vh 0 auto;
+}
+
+.todo-controls {
+    padding: 1vh 0;
+    display: grid;
+    grid-template-columns: 27% 40% 33%;
+    grid-template-areas: 'items-left visible-controls clear-completed'
+}
+
+.items-left {
+    grid-area: items-left;
+    display: inline-block;
+    margin: 0.75vh 0 0 1vh;
+    font-size: 12px;
+    color: hsl(234, 11%, 52%);
+}
+
+.visible-controls {
+    grid-area: visible-controls;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.visible-controls button, .clear-completed button {
+    background-color: transparent;
+    border: 0px;
+    margin-top: 0.5vh;
+    color: hsl(236, 25%, 66%);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.visible-controls button:hover, .clear-completed button:hover {
+    cursor: pointer;
+    color: hsl(234, 39%, 85%);
+}
+
+.clear-completed {
+    grid-area: clear-completed;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 1vh;
+}
+
+footer {
+    width: 100%;
+    height: 10vh;
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+footer div {
+    color: hsl(234, 11%, 52%);
+    text-align: center;
+}
